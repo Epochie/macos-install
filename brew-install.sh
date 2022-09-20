@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 
 # Homebrew Script for OSX
-# To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install-script.sh`
+# To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install.sh`
 
 echo "Installing brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#echo "Installing brew cask..."
-#brew tap homebrew/cask
+echo "Installing brew cask..."
+brew tap homebrew/cask
 
 # Programming Languages
 echo "Installing programming languages..."
@@ -16,34 +16,65 @@ echo "Installing programming languages..."
 #brew install --cask oracle-jdk-javadoc
 
 # Dev Tools
-echo "Installing development tools..."
+echo "Installing Packages..."
 brew install git
-brew install rancher
+brew install go
+brew install wget
+brew install htop
+brew install gnutls
+brew install node
+brew install yarn
+brew install tree
 brew install awscli
+brew install aws-cdk
 brew install virtualenv
-brew install tfenv # Terraform version manager inspired by rbenv
 brew install rbenv # Ruby version manager
 brew install --cask visual-studio-code
+
+# Hashicorp
+echo "Installing Hashicorp tools and related..."
+brew tap hashicorp/tap
+brew install hashicorp/tap/vault
+brew install hashicorp/tap/nomad
+brew install hashicorp/tap/waypoint
+brew install hashicorp/tap/boundary
+brew install hashicorp/tap/packer
+brew install vagrant
+brew install tfenv # Terraform version manager inspired by rbenv
+brew install tflint
+brew install checkov
+brew install policy_sentry
+brew install infracost
+brew install terraform-docs
+
+# Kubernetes
+brew install --cask rancher
+brew install kubernetes-cli
+brew install cdk8s
+brew install kubectx
+brew install helm
+brew install k9s
+brew install consul-k8s
+brew install datree
 
 # Communication Apps
 echo "Installing communication apps..."
 #brew install --cask keybase
 brew install --cask microsoft-teams
 brew install --cask microsoft-office
+brew install --cask microsoft-auto-update
 brew install --cask whatsapp
 brew install --cask telegram-desktop
 brew install --cask slack
 brew install --cask amazon-chime
 brew install --cask zoom
-brew install --cask iina
 
 # Web Tools
-echo "Installing web tools..."
-#brew install httpie
+echo "Installing tools..."
+brew install --cask iterm2
 brew install python-yq
 brew install node
 brew install nvm
-#brew install --cask firefox
 brew install --cask google-chrome
 
 # File Storage
@@ -54,11 +85,18 @@ brew install --cask google-drive
 
 # Other
 echo "Installing everything else..."
+brew install --cask aerial
 brew install --cask spotify
 brew install --cask drawio
 brew install --cask bitwarden
+
 brew install --cask leapp
+brew install --cask session-manager-plugin
+
+/bin/ln -s /opt/homebrew/bin/session-manager-plugin /usr/local/bin/session-manager-plugin
+/bin/ln -s /opt/homebrew/bin/aws /usr/local/bin/aws
+
 brew install --cask commander-one
 brew install --cask alfred
-brew install --cask ubar
-brew install --cask textsniper
+#brew install --cask textsniper
+brew install --cask iina
