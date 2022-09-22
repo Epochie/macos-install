@@ -50,6 +50,8 @@ brew install terraform-docs
 # Kubernetes
 brew install --cask rancher
 brew install kubernetes-cli
+brew install aws-iam-authenticator
+brew install eksctl
 brew install cdk8s
 brew install kubectx
 brew install helm
