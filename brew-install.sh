@@ -1,16 +1,14 @@
 #!/bin/bash
 
 # Homebrew Script for OSX
-# To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install.sh`
-
-echo "Installing brew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing brew cask..."
 brew tap homebrew/cask
+brew tap weaveworks/tap
+brew tap hashicorp/tap
 
 # Programming Languages
-echo "Installing programming languages..."
+#echo "Installing programming languages..."
 #brew install scala
 #brew install --cask r
 #brew install --cask oracle-jdk-javadoc
@@ -33,7 +31,6 @@ brew install --cask visual-studio-code
 
 # Hashicorp
 echo "Installing Hashicorp tools and related..."
-brew tap hashicorp/tap
 brew install hashicorp/tap/vault
 brew install hashicorp/tap/nomad
 brew install hashicorp/tap/waypoint
@@ -51,10 +48,10 @@ brew install terraform-docs
 brew install --cask rancher
 brew install kubernetes-cli
 brew install aws-iam-authenticator
-brew install eksctl
+brew install weaveworks/tap/eksctl
+# brew install eks-anywhere: ARM CPU's are not yet supported (22/9/22)
 brew install cdk8s
 brew install kubectx
-brew install helm
 brew install k9s
 brew install consul-k8s
 brew install datree
@@ -83,7 +80,7 @@ brew install --cask google-chrome
 echo "Installing file storage tools..."
 brew install --cask dropbox
 brew install --cask google-drive
-#brew install --cask onedrive
+brew install --cask onedrive
 
 # Other
 echo "Installing everything else..."
@@ -95,8 +92,8 @@ brew install --cask bitwarden
 brew install --cask leapp
 brew install --cask session-manager-plugin
 
-/bin/ln -s /opt/homebrew/bin/session-manager-plugin /usr/local/bin/session-manager-plugin
-/bin/ln -s /opt/homebrew/bin/aws /usr/local/bin/aws
+usr/bin/ln -s /opt/homebrew/bin/session-manager-plugin /usr/local/bin/session-manager-plugin
+usr/bin/ln -s /opt/homebrew/bin/aws /usr/local/bin/aws
 
 brew install --cask commander-one
 brew install --cask alfred
