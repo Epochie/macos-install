@@ -88,6 +88,7 @@ brew install --cask aerial
 brew install --cask spotify
 brew install --cask drawio
 brew install --cask bitwarden
+brew install bluesnooze
 
 brew install --cask leapp
 brew install --cask session-manager-plugin
