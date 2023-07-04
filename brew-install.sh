@@ -24,6 +24,7 @@ brew install node
 brew install yarn
 brew install tree
 brew install awscli
+brew install cloudformation-guard
 brew install aws-cdk
 brew install virtualenv
 brew install rbenv # Ruby version manager
