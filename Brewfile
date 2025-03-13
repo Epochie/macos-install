@@ -3,6 +3,7 @@ cask_args appdir: "~/Applications", require_sha: true
 
 # Brew tap
 tap homebrew/cask
+tap homebrew/cask-versions
 # tap coretech/terrafile
 
 # tools
@@ -11,6 +12,10 @@ brew "pre-commit" # Framework for managing multi-language pre-commit hooks
 brew "htop"
 brew "tree" # Display directories as trees (with optional color/HTML output)
 brew "gnutls"
+brew "alt-tab" # Enable Windows-like alt-tab
+brew "hiddenbar"
+brew "stats"
+brew "itsycal"
 
 # programming related
 brew "node"
@@ -30,9 +35,9 @@ brew "gh" # GitHub command-line tool
 
 # AWS Tools
 brew "awscli" # Official Amazon AWS command-line interface
-brew "rain" # Command-line tool for working with AWS CloudFormation
-brew "cloudformation-guard" # Checks CloudFormation templates for compliance using a declarative syntax
-brew "aws-cdk" # AWS Cloud Development Kit - framework for defining AWS infra as code
+#brew "rain" # Command-line tool for working with AWS CloudFormation
+#brew "cloudformation-guard" # Checks CloudFormation templates for compliance using a declarative syntax
+#brew "aws-cdk" # AWS Cloud Development Kit - framework for defining AWS infra as code
 #brew "eksctl" # Simple command-line tool for creating clusters on Amazon EKS
 # cask "amazon-chime"
 # brew "aws-iam-authenticator" # 
@@ -66,32 +71,34 @@ brew "rbenv" # Ruby version manager
 # brew "kubens"
 
 # Casks
-cask "arc"
+cask "keka" # File archiver
+cask "kap" # Open-source screen recorder built with web technology
+cask "utm" # Virtual machines UI using QEMU
+cask "vivaldi"
 cask "balenaetcher"
 cask "betterdisplay"
 cask "bitwarden"
 cask "bluesnooze"
-cask "drawio"
-cask "dropbox"
+cask "filen"
+cask "tuta-mail"
 cask "google-chrome"
 cask "google-drive"
 cask "iina"
 cask "iterm2"
-cask "leapp"
+cask "raycast"
 cask "slack"
 cask "telegram-desktop"
 cask "textsniper"
 cask "visual-studio-code"
 cask "whatsapp"
-cask "xmind"
+cask "plexamp"
 
 # vscode extensions
 vscode "GitHub.codespaces"
-vscode "github.copilot" # Get Code Suggestions in real-time, right in your IDE
-vscode "github.vscode-github-actions" # extension lets you manage your workflows, view the workflow run history, and helps with authoring workflows
+#vscode "github.copilot" # Get Code Suggestions in real-time, right in your IDE
+#vscode "github.vscode-github-actions" # extension lets you manage your workflows, view the workflow run history, and helps with authoring workflows
 vscode "boto3typed.boto3-ide" # extension to enable code completion and type checking for all boto3 services. Supports pip, poetry and pipenv installers
 vscode "ms-azuretools.vscode-docker" # Docker extension makes it easy to build, manage, and deploy containerized applications from Visual Studio Code.
-vscode "hediet.vscode-drawio" # integrates Draw.io (also known as diagrams.net) into VS Code.
 vscode "eamodio.gitlens" # powerful open-source extension for Visual Studio Code.
 vscode "equinusocio.vsc-community-material-theme" # Material theme
 vscode "4ops.terraform"
